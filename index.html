@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智理财 (SmartFinance AI)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#10B981', // Emerald 500
+              secondary: '#3B82F6', // Blue 500
+              danger: '#EF4444', // Red 500
+              warning: '#F59E0B', // Amber 500
+              background: '#F3F4F6', // Gray 100
+              surface: '#FFFFFF',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #F3F4F6;
+        font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      }
+      /* Hide scrollbar for clean UI */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Default: hide print-only elements */
+      .print-only {
+        display: none;
+      }
+      
+      /* Print Styles for PDF Export */
+      @media print {
+        @page {
+          margin: 1cm;
+          size: A4;
+        }
+        
+        body {
+          background-color: white !important;
+          color: black !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+
+        .no-print {
+          display: none !important;
+        }
+
+        .print-only {
+          display: block !important;
+        }
+
+        /* Remove shadows for cleaner print */
+        .shadow-sm, .shadow-md, .shadow-lg {
+          box-shadow: none !important;
+          border: 1px solid #e5e7eb !important; /* Add light border to replace shadow */
+        }
+        
+        /* Ensure charts and colors print */
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+
+        /* Adjust layout for print */
+        #root {
+          width: 100%;
+          max-width: 100%;
+        }
+        
+        main {
+          padding: 0 !important;
+        }
+        
+        /* Expand scrollable areas so all content prints */
+        .overflow-y-auto {
+          overflow: visible !important;
+          max-height: none !important;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

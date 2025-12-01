@@ -1,0 +1,7 @@
+{
+  "name": "智理财 (SmartFinance AI)",
+  "description": "基于 Gemini 语音输入的智能记账与理财分析助手",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
